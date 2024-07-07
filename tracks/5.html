@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../2.jpg" type="image/x-icon">
+    <style>
+        *{
+            text-align: center;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img{
+            width: 20%;
+            margin: 20px;
+        }
+        p{
+            margin: 20px;
+        }
+        a:hover{
+            cursor: pointer;
+            color: darkgray;
+        }
+    </style>
+<body>
+    <main>
+        <h1>
+            index
+        </h1>
+        <div>
+            <img draggable="false" src="../5.jpg">
+            <h2>[redacted]</h2>
+            <audio controls>
+                <source src="../meow.mp3">
+            </audio>
+            <p>
+                [contents]
+            </p>
+            <a href="../index.html">back</a>
+        </div>
+    </main>
+</body>
+<script>
+    let vid = document.querySelector("audio");
+    vid.autoplay = true;
+    vid.load();
+</script>
+</html>
