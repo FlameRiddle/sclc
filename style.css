@@ -15,7 +15,7 @@ main{
     align-items: center;
     background-color: rgba(60,60,60,0.75);
     width: max-content;
-    height: 100vh;
+    height: auto;
 }
 body{
     background-image: url(bg3.jpg);
@@ -24,7 +24,7 @@ body{
     align-items: center;
     flex-direction: column;
 }
-h1{
+h1, h2{
     margin: 30px;
     color: white;
 }
