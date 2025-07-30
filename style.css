@@ -5,8 +5,9 @@
     border-spacing: 0;
     user-select: none;
     font-family: "Space Mono", monospace;
+    overflow: hidden;
 }
-a{
+.album{
     color: black;
 }
 main{
@@ -15,10 +16,10 @@ main{
     align-items: center;
     background-color: rgba(60,60,60,0.75);
     width: max-content;
-    height: auto;
+    height: 100vh;
 }
 body{
-    background-image: url(bg3.jpg);
+    background-image: url(img/bg3.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -30,18 +31,18 @@ h1, h2{
 }
 
 div{
-    width: 501px;
-    height: 501px;
+    width: 500px;
+    height: 500px;
     max-width: 96vw;
     max-height: 96vw;
-    background-color: white;
+  /*  background-color: white; */
     display: grid;
     border-radius: 1%;
     margin: 10px;
     grid-template-rows: 167px 167px 167px;
     grid-template-columns: 167px 167px 167px;
 }
-a span{
+.album span{
     visibility: visible;
     position: absolute;
     text-align: center;
@@ -49,11 +50,11 @@ a span{
     width: 100%;
     transition: 20ms;
 }
-a:hover span{
+.album:hover span{
     visibility: visible;
     transition: 20ms;
 }
-a{
+.album{
     width: 88%;
     height: 88%;
     margin: auto;
@@ -61,7 +62,7 @@ a{
     position: relative;
     display: inline-block;
 }
-a:hover{
+.album:hover{
     width: 92%;
     height: 92%;
     transition: 100ms;
@@ -70,7 +71,7 @@ a:hover{
 img{
     width: 100%;
     border-radius: 1%;
-    box-shadow: 0px 0px 10px 0px #7DA396;
+    box-shadow: 0px 0px 10px 0px #6b6b6b;
 }
 .icon{
     box-shadow: none;
@@ -94,12 +95,64 @@ footer{
   }
 
 @media (min-width:961px)  {
-    a span{
+    .album span{
         visibility: hidden;
     }
 }
 @media (max-width:960px)  {
-    a span{
+    .album span{
         visibility: visible;
     }
+}
+ol{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style-position: inside; /* keeps numbers inside content box */
+    grid-column: 1 / -1; /* spans all columns */
+    grid-row: 1 / -1;
+    overflow-y: auto;
+}
+li{
+    width: 94%;
+    color: white;
+    margin: 3%;
+    padding: 2px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.25s;
+    /*border-radius: 5px;
+    background-image: url(album/download.gif);
+    background-repeat: repeat;
+    background-size: 20%;*/
+}
+li:hover{
+    transition: border-bottom 0.25s;
+    border-bottom: 2px white solid;
+}
+.length{
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    margin-right: 0;
+}
+a{
+    color: white;
+    text-decoration: none;
+    cursor: default;
+}
+a:hover{
+    cursor: default;
+}
+#homepage{
+    color: white;
+}
+#homepage:hover{
+    text-decoration: underline;
+    color: lightgray;
 }
